@@ -19,32 +19,32 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+es:
   activerecord:
     attributes:
       article:
-        title: "Title"
-        body: "Body"
+        title: "Títol"
+        body: "Cos"
   forms:
     messages:
-      success: "Operation succeeded!"
+      success: "Operació satisfactòria!"
     buttons:
-      edit: "Edit"
-      submit: "Submit"
+      edit: "Editar"
+      submit: "Enviar"
   menu:
-    new_article: "Add an article"
+    new_article: "Afegir un article"
     languages:
-      lang: "Language"
-      es: "Spanish"
-      ca: "Catalan"
-      en: "English"
+      lang: "Idioma"
+      es: "Espanyol"
+      ca: "Català"
+      en: "Anglès"
   articles:
     index:
-      title: "List of articles"
+      title: "Llista d'articles"
       count:
         one: "%{count} article"
         other: "%{count} articles"
     edit:
-      title: "Edit article"
+      title: "Editar article"
     new:
-      title: "New article"
+      title: "Nou article"
