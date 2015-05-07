@@ -11,13 +11,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150506102305) do
+ActiveRecord::Schema.define(version: 20150507111532) do
+
+  create_table "article_translations", force: :cascade do |t|
+    t.integer  "article_id", null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "title"
+    t.text     "body"
+  end
+
+  add_index "article_translations", ["article_id"], name: "index_article_translations_on_article_id"
+  add_index "article_translations", ["locale"], name: "index_article_translations_on_locale"
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "sqlite_sp_functions", id: false, force: :cascade do |t|
+    t.text "name"
+    t.text "text"
+  end
+
+# Could not dump table "sqlite_stat1" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+
+# Could not dump table "sqlite_stat4" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+
+  create_table "sqlite_vs_links_names", id: false, force: :cascade do |t|
+    t.text "name"
+    t.text "alias"
+  end
+
+  create_table "sqlite_vs_properties", id: false, force: :cascade do |t|
+    t.text "parentType"
+    t.text "parentName"
+    t.text "propertyName"
+    t.text "propertyValue"
   end
 
 end
